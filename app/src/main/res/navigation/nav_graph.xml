@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tituloFragment">
+
+    <fragment
+        android:id="@+id/tituloFragment"
+        android:name="com.example.quiz.TituloFragment"
+        android:label="fragment_titulo"
+        tools:layout="@layout/titulo_fragment" >
+        <action
+            android:id="@+id/action_tituloFragment_to_perguntaFragment"
+            app:destination="@id/perguntaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perguntaFragment"
+        android:name="com.example.quiz.PerguntaFragment"
+        android:label="PerguntaFragment"
+        tools:layout="@layout/pergunta_fragment">
+        <action
+            android:id="@+id/action_perguntaFragment_to_falhaFragment"
+            app:destination="@id/falhaFragment" />
+        <action
+            android:id="@+id/action_perguntaFragment_to_sucessoFragment"
+            app:destination="@id/sucessoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/falhaFragment"
+        android:name="com.example.quiz.FalhaFragment"
+        android:label="falha_fragment"
+        tools:layout="@layout/falha_fragment" />
+    <fragment
+        android:id="@+id/sucessoFragment"
+        android:name="com.example.quiz.SucessoFragment"
+        android:label="SucessoFragment" />
+
+</navigation>
